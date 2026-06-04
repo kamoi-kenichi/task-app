@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+body {
+    background-color: #faf8f4;
+    color: #5a4d4a;
+    margin: 0;
+    padding: 40px 20px;
+    font-family: 'Caveat', 'Kiwi Maru', sans-serif;
+    font-size: 18px;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+h1 {
+    color: #8c7b75;
+    font-size: 24px;
+    text-align: center;
+    border-bottom: 2px dashed #8c7b75;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+
+form {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+input[type="text"] {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #d4c8c4;
+    border-radius: 20px;
+    outline: none;
+    width: 60%;
+    color: #5a4d4a;
+}
+
+
+input[type="text"]:focus {
+    border-color: #8c7b75;
+    box-shadow: 0 0 5px rgba(140, 123, 117, 0.3);
+}
+
+
+button {
+    background-color: #8c7b75;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #7a6a64;
+    transform: translateY(-2px);
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #f0e9e4;
+}
+
+th {
+    background-color: #f7ede8;
+    color: #8c7b75;
+    font-weight: bold;
+}
+
+
+a button {
+    background-color: #b0a49f;
+}
+
+td form {
+    margin-bottom: 0;
+}
+
+td a {
+    margin-right: 8px;
+    text-decoration: none;
+}
+
+.edit-footer {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.back-link {
+    display: inline-block;
+    padding: 8px 20px;
+    color: #8c7b75;
+    text-decoration: none;
+    background-color: #f7ede8;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #eaddd7;
+    transform: translateY(-2px);
+}
+
+.en-title {
+    font-size: 36px;
+    color: #b0a49f;
+    font-weight: normal;
+}

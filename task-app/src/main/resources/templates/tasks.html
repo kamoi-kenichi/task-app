@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>タスク一覧</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Kiwi+Maru:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+    <div class="container">
+        <h1><span class="en-title">Quest Menu</span><br>現在のクエスト（タスク）一覧</h1>
+
+        <form action="/tasks/add" method="post">
+            <input type="text" name="title" placeholder="新しいクエストを入力" required>
+            <button type="submit">追加する</button>
+        </form>
+        <hr>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>タスク名</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="task : ${tasks}">
+                    <td th:text="${task.id}">1</td>
+                    <td th:text="${task.title}">ダミータスク</td>
+
+                    <td>
+                        <a th:href="@{/tasks/edit/{id}(id=${task.id})}">
+                            <button type="button">編集</button>
+                        </a>
+                        <form th:action="@{/tasks/delete/{id}(id=${task.id})}" method="post" style="display:inline;">
+                            <button type="submit">削除</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
