@@ -17,6 +17,8 @@
         <h1><span class="en-title">Quest Menu</span><br>現在のクエスト（タスク）一覧</h1>
 
         <form action="/tasks/add" method="post">
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+
             <input type="text" name="title" placeholder="新しいクエストを入力" required>
             <button type="submit">追加する</button>
         </form>
@@ -39,7 +41,9 @@
                         <a th:href="@{/tasks/edit/{id}(id=${task.id})}">
                             <button type="button">編集</button>
                         </a>
+
                         <form th:action="@{/tasks/delete/{id}(id=${task.id})}" method="post" style="display:inline;">
+                            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
                             <button type="submit">削除</button>
                         </form>
                     </td>
